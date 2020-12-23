@@ -31,13 +31,13 @@ class RouteController
     private function __construct()
     {
         $address_str = $_SERVER['REQUEST_URI'];
-        if (strrpos($address_str, '/') === srtlen($address_str)-1 && strrpos($address_str, '/')!==0){         // последнее вхождение в строку
-            $this-> redirect(rtrim($address_str,'/'),301);  //obrez
+        if (strrpos($address_str, '/') === strlen($address_str)-1 && strrpos($address_str, '/')!==0){         // последнее вхождение в строку
+            $this->redirect(rtrim($address_str,'/'),301);  //obrez
     }
         $path = substr($_SERVER['PHP_SELF'],0, strrpos($_SERVER['PHP_SELF'],'index.php'));
         if ($path===PATH) {
             $this->routes =Settings::get('routes');
-            if ($this->routes) throw new RouteException('сайт на тех обслуживание');
+            if ($this->routes) throw new RouteException('<h1>Здравствуйте, я Дмитрий Шатурский!</h1>');
             if (strrpos($address_str,$this->routes['admin']['alias']) === strlen(PATH)){
                 //работа с админ панелью
             }else {
