@@ -1,0 +1,17 @@
+{
+    "name": "shatu/blog",
+    "description": "Blog on PHP and MySQL",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Shatura",
+            "email": "sharura_mak@mail.ru"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "slim/slim": "4.*",
+        "slim/psr7": "^1.3",
+        "twig/twig": "^3.2"
+    }
+}
